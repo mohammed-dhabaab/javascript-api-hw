@@ -15,6 +15,16 @@ body {
     background-color: #595856;
 }
 
+.main-title {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    background: linear-gradient(90deg, white 40%, black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .main-container {
     max-width: 1200px;
     padding: 40px;
@@ -41,6 +51,8 @@ body {
 
 .card-container:hover .card-image {
     transform: scale(2) translate(1%, 1%) rotate(1deg);
+    filter: grayscale(0);
+
 }
 
 .card-container-image {
@@ -54,7 +66,7 @@ body {
 
 .card-image {
     transform: scale(2) translate(1%, 1%);
-    filter: grayscale(.20) contrast();
+    filter: grayscale(.80);
     transition: all .2s ease-in-out;
 }
 
