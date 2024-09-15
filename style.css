@@ -35,7 +35,8 @@ body {
 }
 
 .card-container:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
+    box-shadow: 1px 1px 10px 6px #8c8b88;
 }
 
 .card-container:hover .card-image {
@@ -53,7 +54,7 @@ body {
 
 .card-image {
     transform: scale(2) translate(1%, 1%);
-    filter: grayscale(.20);
+    filter: grayscale(.20) contrast();
     transition: all .2s ease-in-out;
 }
 

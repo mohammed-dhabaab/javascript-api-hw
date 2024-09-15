@@ -36,32 +36,6 @@ const resCodeNames = [
 
 const mainContainer = document.querySelector(".main-container")
 
-// async function fetchStatus() {
-//     try {
-//         if (!res.ok) {
-//             throw new Error(`Network response was not ok. status: ${res.status}`)
-//         }
-//         resCodes.map((code, index) => {
-//             const imageSrc = await fetch(`https://http.cat/${code}`)
-//             const cardContainer = createElement("div", "cardContainer")
-//             const cardImageContainer = createElement("div", "character-container-image")
-//             const cardImage = createElement("img", "card-image", null, )
-//             const cardCode = createElement("h2", "card-code", code)
-//             const cardTitle = createElement("p", "card-title", resCodeNames[index])
-
-//             cardImageContainer.appendChild(cardImage)
-//             cardContainer.appendChild(cardImageContainer)
-//             cardContainer.appendChild(cardCode)
-//             cardContainer.appendChild(cardTitle)
-
-//             mainContainer.appendChild(cardImageContainer)
-//         })
-
-//     } catch (error) {
-//         console.error('Error:', error);
-//     }
-// }
-
 async function fetchStatus() {
     try {
         for (const [index, code] of resCodes.entries()) {
@@ -70,8 +44,10 @@ async function fetchStatus() {
                 throw new Error(`Failed to fetch image for code ${code}: ${response.status}`);
             }
             // Creating
-            const cardContainer = document.createElement("div")
+            const cardContainer = document.createElement("a")
             cardContainer.classList.add("card-container")
+            cardContainer.href = `https://http.cat/status/${code}`
+            cardContainer.setAttribute("target", "_blank")
 
             const cardImageContainer = document.createElement("div")
             cardImageContainer.classList.add("card-container-image")
