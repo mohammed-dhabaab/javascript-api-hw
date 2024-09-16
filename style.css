@@ -16,8 +16,9 @@ body {
 }
 
 .main-title {
+    font-size: 50px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
     color: white;
     background: linear-gradient(90deg, white 40%, black);
     -webkit-background-clip: text;
@@ -96,7 +97,7 @@ body {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:858px) {
     .main-container {
         grid-template-columns: repeat(3, 1fr);
     }

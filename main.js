@@ -54,7 +54,7 @@ async function fetchStatus() {
 
             const cardImage = document.createElement("img")
             cardImage.classList.add("card-image");
-            cardImage.src = `${response.url}.jpg`
+            cardImage.src = `${response.url}`
 
             const cardCode = document.createElement("h2")
             cardCode.classList.add("card-code");
